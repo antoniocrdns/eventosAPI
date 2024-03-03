@@ -9,9 +9,9 @@ app.set('port', process.env.PORT || 9000)
 const dbSettings = {
     host: 'localhost',
     port: '3306',
-    user: 'id21951592_anton',
-    password: 'Mikasa-0421',
-    database: 'id21951592_bd_paginaeventos',
+    user: 'root',
+    password: '',
+    database: 'paginaboletos',
 }
 
 // Midleware
