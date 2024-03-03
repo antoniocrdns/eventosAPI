@@ -7,11 +7,14 @@ const routes = require('./routes')
 const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbSettings = {
-    host: 'localhost',
+    host: 'aws.connect.psdb.cloud',
     port: '3306',
-    user: 'root',
-    password: '',
-    database: 'paginaboletos',
+    user: 'eiaw2bp9d2cjk69wa27c',
+    password: 'pscale_pw_JH423g05VtfHILjjJJv6AH8n2RdA2WRtcqynA4X0vHQ',
+    database: 'paginaeventos',
+    ssl: {
+        rejectUnauthorized: false
+    }
 }
 
 // Midleware
