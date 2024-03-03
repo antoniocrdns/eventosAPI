@@ -38,7 +38,7 @@ routes.post('/', async (req, res) => {
     try {
         req.getConnection((err, conn) => {
             if (err) return res.send(err)
-            conn.query('insert into eventos set ?', [req.body], (err, rows) => {
+            conn.query('insert into eventos set ?', [req.body], (err) => {
                 if (err) return res.send(err)
 
                 res.send('evento añadido.')
@@ -54,7 +54,7 @@ routes.delete('/:id', async (req, res) => {
     try {
         req.getConnection((err, conn) => {
             if (err) return res.send(err)
-            conn.query('delete from eventos where id = ?', [req.params.id], (err, rows) => {
+            conn.query('delete from eventos where id = ?', [req.params.id], (err) => {
                 if (err) return res.send(err)
 
                 res.send('evento eliminado.')
@@ -70,7 +70,7 @@ routes.put('/:id', async (req, res) => {
     try {
         req.getConnection((err, conn) => {
             if (err) return res.send(err)
-            conn.query('update eventos set ? where id = ?', [req.body, req.params.id], (err, rows) => {
+            conn.query('update eventos set ? where id = ?', [req.body, req.params.id], (err) => {
                 if (err) return res.send(err)
 
                 res.send('evento actualizado.')
