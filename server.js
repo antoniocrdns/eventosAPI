@@ -1,9 +1,10 @@
-// -------- Modulos requeridos -------
+// -------- Modulos requeridos ----------
 const express = require('express')
 const mysql = require('mysql')
 const myconn = require('express-myconnection')
 const routes = require('./routes')
 
+// --------- Conexion a DB -----------
 const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbSettings = {
@@ -20,14 +21,14 @@ const dbSettings = {
 // Midleware
 app.use(myconn(mysql, dbSettings, 'single'))
 app.use(express.json())
-// --------------- Server routes ---------------
+// ------------ Server routes ------------
 app.get('/', (req, res)=>{
     res.send('Welcome to my API')
 })
 
 app.use('/api', routes)
 
-// --------------- Server running ---------------
+// ------------ Server running ------------
 app.listen(app.get('port'), ()=>{
     console.log('Server running on port', app.get('port'))
 });
