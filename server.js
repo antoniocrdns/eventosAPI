@@ -3,6 +3,10 @@ const express = require('express')
 const mysql = require('mysql')
 const myconn = require('express-myconnection')
 const routes = require('./routes')
+const cors = require('cors')
+
+// Habilitar cors
+app.use(cors());
 
 // --------- Conexion a DB -----------
 const app = express()
