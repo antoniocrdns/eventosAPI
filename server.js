@@ -5,11 +5,11 @@ const myconn = require('express-myconnection')
 const routes = require('./routes')
 const cors = require('cors')
 
+// --------- Conexion a DB -----------
+const app = express()
 // Habilitar cors
 app.use(cors());
 
-// --------- Conexion a DB -----------
-const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbSettings = {
     host: 'aws.connect.psdb.cloud',
