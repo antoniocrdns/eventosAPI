@@ -10,8 +10,8 @@ app.set('port', process.env.PORT || 9000)
 const dbSettings = {
     host: 'aws.connect.psdb.cloud',
     port: '3306',
-    user: 'eiaw2bp9d2cjk69wa27c',
-    password: 'pscale_pw_JH423g05VtfHILjjJJv6AH8n2RdA2WRtcqynA4X0vHQ',
+    user: 'abdw5yzobm9tz8wptrqk',
+    password: 'pscale_pw_bOMJ4UCFu26JFH4uvNYxDN3o8lPk7poxJ3dnvP7qJPX',
     database: 'paginaeventos',
     ssl: {
         rejectUnauthorized: false
