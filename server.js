@@ -12,10 +12,10 @@ app.use(cors());
 
 app.set('port', process.env.PORT || 9000)
 const dbSettings = {
-    host: 'aws.connect.psdb.cloud',
+    host: 'localhost',
     port: '3306',
-    user: 'abdw5yzobm9tz8wptrqk',
-    password: 'pscale_pw_bOMJ4UCFu26JFH4uvNYxDN3o8lPk7poxJ3dnvP7qJPX',
+    user: 'root',
+    password: '',
     database: 'paginaeventos',
     ssl: {
         rejectUnauthorized: false
